@@ -154,7 +154,6 @@ class Client
         $result = file_get_contents($url, false, $context);
         $result = json_decode($result);
         if( is_object($result) ){
-            dump($result);
             $result->apiResultData = json_decode($result->apiResultData);
 
             if( $result->apiResultData->success ){
